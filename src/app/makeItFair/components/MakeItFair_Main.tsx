@@ -9,14 +9,14 @@ export default function MakeItFair_Main({ answerList }: any) {
   const [stateAnswerList, setStateAnswerList] = React.useState<any>([]);
 
   return (
-    <div className="w-full h-full flex flex-col p-4 space-y-4 text-slate-500">
+    <div className="w-full h-full flex flex-col space-y-4 text-slate-500">
       {pollData.map((question: any, key: number) => {
         return (
           <>
             <div
               key={key}
               id="divQuestion1"
-              className="w-[1500px] h-[300px] border bg-white relative bg-clip-border rounded-xl overflow-hidden bg-transparent text-gray-700 shadow-none m-0 flex flex-col items-center justify-between p-6"
+              className="w-[1000px] h-[300px] border bg-white relative bg-clip-border rounded-xl overflow-hidden bg-transparent text-gray-700 shadow-none m-0 flex flex-col items-center justify-between p-6"
             >
               <div className="w-full table-auto">
                 <div className="w-full ">
