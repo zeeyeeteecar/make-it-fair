@@ -1,0 +1,305 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model TBEventReg_ACM2017 {
+  ID           Int       @id
+  EventTitle   String?   @db.VarChar(100)
+  RegName      String?   @db.VarChar(100)
+  RegEmail     String?   @db.VarChar(100)
+  RegTel       String?   @db.VarChar(100)
+  RegAddress   String?   @db.VarChar(200)
+  RegAffiliate String?   @db.VarChar(100)
+  RegPreamble  String    @db.LongText
+  RegQuestion  String    @db.LongText
+  RegDate      DateTime? @db.DateTime(0)
+  RegIP        String    @db.VarChar(20)
+}
+
+model TBEventReg_ACM2018 {
+  ID           Int       @id @default(autoincrement())
+  EventTitle   String?   @db.VarChar(100)
+  RegName      String?   @db.VarChar(100)
+  RegEmail     String?   @db.VarChar(100)
+  RegTel       String?   @db.VarChar(100)
+  RegAddress   String?   @db.VarChar(200)
+  RegAffiliate String?   @db.VarChar(100)
+  RegPreamble  String    @db.LongText
+  RegQuestion  String    @db.LongText
+  RegDate      DateTime? @db.DateTime(0)
+  RegIP        String    @db.VarChar(20)
+}
+
+model TBEventReg_ACM2022 {
+  ID           Int       @id @default(autoincrement())
+  EventTitle   String?   @db.VarChar(100)
+  RegName      String?   @db.VarChar(100)
+  RegEmail     String?   @db.VarChar(100)
+  RegTel       String?   @db.VarChar(100)
+  RegAddress   String?   @db.VarChar(200)
+  RegAffiliate String?   @db.VarChar(100)
+  RegPreamble  String    @db.LongText
+  RegQuestion  String    @db.LongText
+  RegDate      DateTime? @db.DateTime(0)
+  RegIP        String    @db.VarChar(20)
+}
+
+model TBEventReg_ChessChampionship2019 {
+  ID              Int      @id @default(autoincrement())
+  EventTitle      String   @db.VarChar(100)
+  RegNameFirst    String   @db.VarChar(100)
+  RegNameLast     String   @db.VarChar(100)
+  RegDOB          DateTime @db.Date
+  RegEmail        String   @db.VarChar(100)
+  RegTel          String   @db.VarChar(100)
+  ParentNameFirst String   @db.VarChar(100)
+  ParentNameLast  String   @db.VarChar(100)
+  ParentTel       String   @db.VarChar(100)
+  ParentEmail     String   @db.VarChar(100)
+  RegDate         DateTime @db.DateTime(0)
+  RegIP           String   @db.VarChar(50)
+}
+
+model TBEventReg_SEEE_2017 {
+  ID         Int      @id
+  EventTitle String   @db.VarChar(100)
+  RegName    String   @db.VarChar(100)
+  RegEmail   String   @db.VarChar(100)
+  RegTel     String   @db.VarChar(100)
+  RegAddress String   @db.VarChar(200)
+  RegDate    DateTime @db.DateTime(0)
+  RegIP      String   @db.VarChar(20)
+  RegLunch   String?  @db.VarChar(3)
+}
+
+model TBEventReg_SEEE_2017_VenderInfo {
+  ID              Int    @id
+  VenderCompTitle String @db.VarChar(50)
+  VenderResource  String @db.VarChar(50)
+  VenderEmail     String @db.VarChar(50)
+  VenderDescrip   String @db.Text
+  VenderBooth     String @db.VarChar(2)
+  VenderTel       String @db.VarChar(20)
+  AMorPM          String @db.VarChar(4)
+  AM1             String @db.VarChar(20)
+  AM2             String @db.VarChar(20)
+  AM3             String @db.VarChar(20)
+  AM4             String @db.VarChar(20)
+  AM5             String @db.VarChar(20)
+  AM6             String @db.VarChar(20)
+  PM1             String @db.VarChar(20)
+  PM2             String @db.VarChar(20)
+  PM3             String @db.VarChar(20)
+  PM4             String @db.VarChar(20)
+  PM5             String @db.VarChar(20)
+  PM6             String @db.VarChar(20)
+}
+
+model TBEventReg_SEEE_2018 {
+  ID         Int      @id @default(autoincrement())
+  EventTitle String   @db.VarChar(100)
+  RegName    String   @db.VarChar(100)
+  RegEmail   String   @db.VarChar(100)
+  RegTel     String   @db.VarChar(100)
+  RegAddress String   @db.VarChar(200)
+  RegDate    DateTime @db.DateTime(0)
+  RegIP      String   @db.VarChar(50)
+  RegLunch   String?  @db.VarChar(3)
+}
+
+model TBEventReg_SEEE_2018_VenderInfo {
+  ID                  Int    @id @default(autoincrement())
+  VenderCompTitle     String @db.VarChar(50)
+  VenderContactPerson String @db.VarChar(50)
+  VenderResource      String @db.VarChar(50)
+  VenderEmail         String @db.VarChar(50)
+  VenderDescrip       String @db.Text
+  VenderBooth         String @db.VarChar(2)
+  VenderTel           String @db.VarChar(20)
+  TimeSlot1           String @db.VarChar(50)
+  TimeSlot2           String @db.VarChar(50)
+  TimeSlot3           String @db.VarChar(50)
+  TimeSlot4           String @db.VarChar(50)
+  TimeSlot5           String @db.VarChar(50)
+  TimeSlot6           String @db.VarChar(50)
+  TimeSlot7           String @db.VarChar(50)
+  TimeSlot8           String @db.VarChar(50)
+  TimeSlot9           String @db.VarChar(50)
+  TimeSlot10          String @db.VarChar(50)
+}
+
+model TBEventReg_SpringIntoAction {
+  ID         Int       @id
+  EventTitle String?   @db.VarChar(100)
+  RegName    String?   @db.VarChar(100)
+  RegEmail   String?   @db.VarChar(100)
+  RegTel     String?   @db.VarChar(100)
+  RegAddress String?   @db.VarChar(200)
+  RegDate    DateTime? @db.DateTime(0)
+  RegIP      String    @db.VarChar(20)
+}
+
+model TBInvisibleIllness2019 {
+  IndexID     Int      @id @default(autoincrement())
+  RegName     String   @db.VarChar(30)
+  RegEmail    String   @db.VarChar(50)
+  RegTel      String   @db.VarChar(20)
+  IfRCDMember String   @db.VarChar(5)
+  RegDate     DateTime @db.DateTime(0)
+  RegIP       String   @db.VarChar(20)
+}
+
+model TB_2017Gala_Karaoka {
+  ID                Int      @id @default(autoincrement())
+  NominatorName     String   @db.VarChar(30)
+  NominatorTelEmail String   @db.VarChar(50)
+  NomineeName       String   @db.VarChar(30)
+  NomineeTelEmail   String   @db.VarChar(50)
+  KaraokeName       String   @db.VarChar(50)
+  BringCD           String   @db.VarChar(3)
+  RegDateTime       DateTime @db.DateTime(0)
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model TB_Auction_Item {
+  ItemID         Int
+  ItemCode       String   @db.VarChar(8)
+  ItemName       String   @db.VarChar(300)
+  ItemDescrip    String   @db.Text
+  ItemPhoto      String   @db.VarChar(200)
+  ItemPriceStart Decimal  @db.Decimal(7, 2)
+  ItemIncrement  Decimal  @db.Decimal(5, 2)
+  ItemStartTime  DateTime @db.DateTime(0)
+  ItemEndTime    DateTime @db.DateTime(0)
+  ItemPhotoPath  String   @db.VarChar(200)
+  ItemActive     String   @db.VarChar(3)
+
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model TB_Auction_Item_Bid {
+  ItemBidID                Int
+  ItemBidName              String   @db.VarChar(20)
+  ItemBidPhone             String   @db.VarChar(20)
+  ItemBidEmail             String   @db.VarChar(50)
+  ItemBidPrice             Decimal  @db.Decimal(5, 2)
+  ItemID                   Int
+  ItemBidRecordCreatedDate DateTime @db.DateTime(0)
+
+  @@ignore
+}
+
+model categoryList {
+  categorytype String? @db.VarChar(255)
+  hide         Int?
+  categoryID   Int     @id @default(autoincrement())
+}
+
+model events {
+  id    Int       @id @default(autoincrement())
+  title String    @db.VarChar(255)
+  color String?   @db.VarChar(7)
+  start DateTime  @db.DateTime(0)
+  end   DateTime? @db.DateTime(0)
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model feature {
+  Parking         String? @db.VarChar(5000)
+  Sidewalk        String? @db.VarChar(5000)
+  Entrance        String? @db.VarChar(5000)
+  PublicWashroom  String? @db.VarChar(1000)
+  Elevator        String? @db.VarChar(1000)
+  Lobby           String? @db.VarChar(1000)
+  GuestRoom       String? @db.VarChar(5000)
+  DiningRoom      String? @db.VarChar(5000)
+  Patio           String? @db.VarChar(5000)
+  MeetingRoom     String? @db.VarChar(5000)
+  PublicTelephone String? @db.VarChar(5000)
+  MajorRestaurant String? @db.VarChar(5000)
+  GroceryOutlet   String? @db.VarChar(1000)
+  FoodCourt       String? @db.VarChar(1000)
+  MainTheatre     String? @db.VarChar(1000)
+  recordInfo_ID   Int?
+  Other           String? @db.VarChar(5000)
+
+  @@index([recordInfo_ID], map: "recordInfo_ID")
+  @@ignore
+}
+
+model recordInfo {
+  recordInfo_ID Int     @id @default(autoincrement())
+  categoryID    Int?
+  Name          String? @db.VarChar(1000)
+  StreetAddress String? @db.VarChar(1000)
+  City          String? @db.VarChar(100)
+  PostalCode    String? @db.VarChar(10)
+  Province      String? @db.VarChar(50)
+  Telephone     String? @db.VarChar(20)
+  Fax           String? @db.VarChar(20)
+  Website       String? @db.VarChar(1000)
+
+  @@index([categoryID], map: "categoryID")
+}
+
+model tbl_MakeItFair_2024 {
+  ID             Int      @id @default(autoincrement())
+  answer         String   @db.VarChar(30)
+  answerIP       String   @db.VarChar(20)
+  answerDateTime DateTime @db.DateTime(0)
+}
+
+model tbl_MakeItFair_2024_Answer {
+  ID             Int      @id @default(autoincrement())
+  quesID         Int
+  answerContent  String   @db.Text
+  clientIP       String   @db.VarChar(20)
+  answerDateTime DateTime @db.DateTime(0)
+  answerTel      String   @db.VarChar(20)
+  answerEmail    String   @db.VarChar(100)
+}
+
+model tbl_MakeItFair_2024_Ques {
+  ID          Int    @id @default(autoincrement())
+  quesTitle   String @db.VarChar(200)
+  quesContent String @db.Text
+}
+
+model tbl_MakeItFair_2024_QuestionAnswer {
+  ID                   Int     @id @default(autoincrement())
+  Question1Content     String  @db.VarChar(200)
+  Question1Excellent   Boolean @default(false)
+  Question1Good        Boolean @default(false)
+  Question1Fair        Boolean @default(false)
+  Question1NotGood     Boolean @default(false)
+  Question1NoKnowledge Boolean @default(false)
+  Question2Content     String  @db.VarChar(200)
+  Question2Yes         Boolean @default(false)
+  Question2No          Boolean @default(false)
+  Question2NotSure     Boolean @default(false)
+}
+
+model tbl_TshirtContest {
+  id         Int      @id
+  fname      String   @db.VarChar(100)
+  lname      String   @db.VarChar(100)
+  tel        String   @db.VarChar(50)
+  email      String   @db.VarChar(100)
+  notes      String   @db.Text
+  artwork    String   @db.VarChar(100)
+  imgPreview String   @db.VarChar(100)
+  ip         String   @db.VarChar(20)
+  submitTime DateTime @db.DateTime(0)
+}
+
+model users {
+  Username String @db.VarChar(50)
+  Password String @db.VarChar(50)
+  id       Int    @id @default(autoincrement())
+}
