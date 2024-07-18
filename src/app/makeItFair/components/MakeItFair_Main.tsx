@@ -3,11 +3,13 @@ import React from "react";
 import { pollData } from "../lib/lib";
 import { CiFaceSmile } from "react-icons/ci";
 
+
 export default function MakeItFair_Main({ answerList }: any) {
   const [showModal_Show, setShowModal_Show] = React.useState(false);
   const handleOnClose = () => setShowModal_Show(false);
 
   const [stateAnswerList, setStateAnswerList] = React.useState<any>([]);
+
 
   return (
     <div className="w-full h-full flex flex-col space-y-4 text-slate-500">
@@ -44,7 +46,9 @@ export default function MakeItFair_Main({ answerList }: any) {
                       return (
                         <>
                           <div className="flex flex-row border-0 items-center gap-6">
-                           <span><CiFaceSmile /></span>
+                            <span>
+                              <CiFaceSmile />
+                            </span>
                             <span className="w-[1000px] block antialiased font-sans text-lg leading-normal text-blue-gray-900 font-semibold border-0 ">
                               {eachAnswer.answerTitle}
                             </span>
@@ -59,7 +63,7 @@ export default function MakeItFair_Main({ answerList }: any) {
 
                             <div className="w-[300px] h-[10px] bg-slate-200 rounded-xl ">
                               <div
-                                style={{ width: widthPercent + "px" }}
+                                style={{ width: widthPercent + "%" }}
                                 className="h-[10px] shadow-none  text-center whitespace-nowrap text-white justify-center bg-blue-600  rounded-lg rounded-lg`;
 "
                               ></div>
