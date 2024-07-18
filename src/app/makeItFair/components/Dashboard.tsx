@@ -5,6 +5,16 @@ import { MdOutlineWhereToVote } from "react-icons/md";
 export default function Dashboard({ answerList }: any) {
   const countVote = answerList.length;
 
+  const combined = answerList.reduce((acc: any, obj: any) => {
+    const existing = acc.find((item: any) => item.answerIP === obj.answerIP);
+    if (existing) {
+      existing.value = [].concat(existing.value, obj.value);
+    } else {
+      acc.push({ ...obj, value: [obj.value] });
+    }
+    return acc;
+  }, []);
+
   return (
     <div className="flex flex-row gap-6">
       <div className="w-[250px] h-[150px]  flex flex-row justify-center items-center border-0 gap-4 bg-white rounded-2xl">
@@ -13,7 +23,7 @@ export default function Dashboard({ answerList }: any) {
         </div>
         <div className="flex flex-col">
           <span className="block w-[50px] text-3xl font-bold text-center ">
-            {countVote}
+            {combined.length}
           </span>
           <span className="block w-[100px]  text-gray-500 text-sm">People</span>
         </div>
