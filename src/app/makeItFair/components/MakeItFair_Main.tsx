@@ -44,8 +44,8 @@ export default function MakeItFair_Main({ answerList }: any) {
 
                       return (
                         <>
-                          <div className="flex flex-row border-0 items-center gap-2">
-                            <span>
+                          <div className="flex flex-row border-0 items-center gap-3">
+                            <span className="text-blue-400">
                               <CiFaceSmile />
                             </span>
 
