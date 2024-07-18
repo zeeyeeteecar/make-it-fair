@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { pollData } from "../../lib/lib";
+import Dashboard from "./Dashboard";
 import { CiFaceSmile } from "react-icons/ci";
 import { SlPeople } from "react-icons/sl";
 
@@ -12,13 +13,14 @@ export default function MakeItFair_Main({ answerList }: any) {
 
   return (
     <div className="w-full h-full flex flex-col space-y-4 text-slate-500">
+      <Dashboard answerList={answerList} />
       {pollData.map((question: any, key: number) => {
         return (
           <>
             <div
               key={key}
               id="divQuestion1"
-              className="w-[1100px]  border bg-white relative bg-clip-border rounded-xl overflow-hidden bg-transparent text-gray-700 shadow-none m-0 flex flex-col items-center justify-between p-6"
+              className="w-[1100px]  border bg-white relative bg-clip-border rounded-xl overflow-hidden bg-transparent text-gray-700 shadow-none m-0 flex flex-col items-center justify-between p-4"
             >
               <div className="w-full table-auto">
                 <div className="w-full ">
