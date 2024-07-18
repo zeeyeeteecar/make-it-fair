@@ -1,15 +1,14 @@
 "use client";
 import React from "react";
-import { pollData } from "../lib/lib";
+import { pollData } from "../../lib/lib";
 import { CiFaceSmile } from "react-icons/ci";
-
+import { SlPeople } from "react-icons/sl";
 
 export default function MakeItFair_Main({ answerList }: any) {
   const [showModal_Show, setShowModal_Show] = React.useState(false);
   const handleOnClose = () => setShowModal_Show(false);
 
   const [stateAnswerList, setStateAnswerList] = React.useState<any>([]);
-
 
   return (
     <div className="w-full h-full flex flex-col space-y-4 text-slate-500">
@@ -45,23 +44,27 @@ export default function MakeItFair_Main({ answerList }: any) {
 
                       return (
                         <>
-                          <div className="flex flex-row border-0 items-center gap-6">
+                          <div className="flex flex-row border-0 items-center gap-2">
                             <span>
                               <CiFaceSmile />
                             </span>
-                            <span className="w-[1000px] block antialiased font-sans text-lg leading-normal text-blue-gray-900 font-semibold border-0 ">
+
+                            <span className="w-[1400px] block antialiased font-sans text-lg leading-normal text-blue-gray-900 border-0 ">
                               {eachAnswer.answerTitle}
                             </span>
 
-                            <span className="w-[100px] block antialiased font-sans text-sm text-blue-gray-600 border-0 ">
+                            <span className="text-xs text-slate-300">
+                              <SlPeople />
+                            </span>
+                            <span className="w-[100px] block antialiased font-sans text-blue-gray-600 border-0 ">
                               {answerCount}
                             </span>
 
-                            <span className="w-[100px] antialiased font-sans mb-1 block text-sm  text-blue-gray-600 border-0">
+                            <span className="w-[100px] antialiased font-sans mb-1 block text-sm  text-blue-gray-600 border-0 text-right">
                               {widthPercent.toString() + " %"}
                             </span>
 
-                            <div className="w-[300px] h-[10px] bg-slate-200 rounded-xl ">
+                            <div className="w-[200px] h-[10px] bg-slate-200 rounded-xl ">
                               <div
                                 style={{ width: widthPercent + "%" }}
                                 className="h-[10px] shadow-none  text-center whitespace-nowrap text-white justify-center bg-blue-600  rounded-lg rounded-lg`;
