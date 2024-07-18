@@ -20,14 +20,19 @@ export default function MakeItFair_Main({ answerList }: any) {
             <div
               key={key}
               id="divQuestion1"
-              className="w-[1100px]  border bg-white relative bg-clip-border rounded-xl overflow-hidden bg-transparent text-gray-700 shadow-none m-0 flex flex-col items-center justify-between p-4"
+              className="w-[1200px]  border bg-white relative bg-clip-border rounded-xl overflow-hidden bg-transparent text-gray-700 shadow-none m-0 flex flex-col items-center justify-between p-4"
             >
               <div className="w-full table-auto">
-                <div className="w-full ">
-                  <p className="block antialiased font-sans text-[20px] font-medium text-blue-gray-400 text-blue-700">
-                    --- Question {key + 1} --- {question.question_Title}
-                  </p>
+
+                <div className="w-full flex flex-col space-y-2">
+                  <span className="grid place-items-center h-[20px] text-[15px] font-sans font-medium text-yellow-600 text-sm  w-[150px] rounded-full bg-yellow-200 text-center">
+                    Question {key + 1}
+                  </span>
+                  <span className="block text-[19px]  font-sans text-blue-700 tracking-tighter pl-3 border-0">
+                    {question.question_Title}
+                  </span>
                 </div>
+
                 <div className="w-full p-4 space-y-2">
                   {question.question_Answer.map(
                     (eachAnswer: any, key: number) => {
@@ -51,7 +56,7 @@ export default function MakeItFair_Main({ answerList }: any) {
                               <CiFaceSmile />
                             </span>
 
-                            <span className="w-[1400px] block antialiased font-sans text-lg leading-normal text-blue-gray-900 border-0 ">
+                            <span className="w-[1400px] block antialiased font-sans  leading-normal text-blue-gray-900 border-0 ">
                               {eachAnswer.answerTitle}
                             </span>
 
@@ -69,7 +74,7 @@ export default function MakeItFair_Main({ answerList }: any) {
                             <div className="w-[200px] h-[10px] bg-slate-200 rounded-xl ">
                               <div
                                 style={{ width: widthPercent + "%" }}
-                                className="h-[10px] shadow-none  text-center whitespace-nowrap text-white justify-center bg-blue-600  rounded-lg rounded-lg`;
+                                className="h-[10px] shadow-none  text-center whitespace-nowrap text-white justify-center bg-blue-400  rounded-lg rounded-lg`;
 "
                               ></div>
                             </div>
