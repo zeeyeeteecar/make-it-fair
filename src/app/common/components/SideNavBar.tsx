@@ -29,8 +29,8 @@ const navItems = [
 
 export default function SideNavBar() {
   return (
-    <div className="h-full w-64  flex flex-col bg-gray-300 text-gray-800 border-0 border-orange-100 rounded-2xl">
-      <div className="flex flex-col top-0 left-0 w-64 bg-white h-full border-r  text-gray-800 rounded-2xl">
+    <div className="h-full w-[250px]  flex flex-col bg-gray-300 text-gray-800 border-0 border-orange-100 rounded-2xl">
+      <div className="flex flex-col top-0 left-0 w-full bg-white h-full border-r  text-gray-800 rounded-2xl">
         {navItems.map((itemGroup: any, key: number) => {
           return (
             <>
