@@ -19,7 +19,7 @@ export default function MakeItFair_Main({ answerList }: any) {
             <div
               key={key}
               id="divQuestion1"
-              className="w-[1100px] h-[300px] border bg-white relative bg-clip-border rounded-xl overflow-hidden bg-transparent text-gray-700 shadow-none m-0 flex flex-col items-center justify-between p-6"
+              className="w-[1100px]  border bg-white relative bg-clip-border rounded-xl overflow-hidden bg-transparent text-gray-700 shadow-none m-0 flex flex-col items-center justify-between p-6"
             >
               <div className="w-full table-auto">
                 <div className="w-full ">
