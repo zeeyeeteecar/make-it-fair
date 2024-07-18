@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { pollData } from "../lib/lib";
+import { CiFaceSmile } from "react-icons/ci";
 
 export default function MakeItFair_Main({ answerList }: any) {
   const [showModal_Show, setShowModal_Show] = React.useState(false);
@@ -42,7 +43,8 @@ export default function MakeItFair_Main({ answerList }: any) {
 
                       return (
                         <>
-                          <div className="flex flex-row border items-center gap-6">
+                          <div className="flex flex-row border-0 items-center gap-6">
+                           <span><CiFaceSmile /></span>
                             <span className="w-[1000px] block antialiased font-sans text-lg leading-normal text-blue-gray-900 font-semibold border-0 ">
                               {eachAnswer.answerTitle}
                             </span>
