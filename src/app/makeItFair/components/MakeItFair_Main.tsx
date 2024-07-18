@@ -51,7 +51,7 @@ export default function MakeItFair_Main({ answerList }: any) {
                       return (
                         <>
                           <div className="flex flex-row border-0 items-center gap-3">
-                            <span className="text-blue-400">
+                            <span className="text-yellow-500">
                               <CiFaceSmile />
                             </span>
 
