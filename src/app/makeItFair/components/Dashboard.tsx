@@ -29,7 +29,7 @@ export default function Dashboard({ answerList }: any) {
         </div>
       </div>
 
-      <div className="w-[250px] h-[150px]  flex flex-row justify-center items-center border-0 gap-4 bg-white">
+      <div className="w-[250px] h-[150px]  flex flex-row justify-center items-center border-0 gap-4 bg-white rounded-2xl">
         <div className="inline-flex flex-row items-center justify-center h-16 w-16 text-green-600 text-2xl bg-green-100 rounded-full  font-light ">
           <MdOutlineWhereToVote />
         </div>
@@ -38,7 +38,7 @@ export default function Dashboard({ answerList }: any) {
             {countVote}
           </span>
           <span className="block w-[100px]  text-gray-500 text-sm">
-            Total Vote
+            Total Votes
           </span>
         </div>
       </div>

@@ -23,9 +23,8 @@ export default function MakeItFair_Main({ answerList }: any) {
               className="w-[1200px]  border bg-white relative bg-clip-border rounded-xl overflow-hidden bg-transparent text-gray-700 shadow-none m-0 flex flex-col items-center justify-between p-4"
             >
               <div className="w-full table-auto">
-
                 <div className="w-full flex flex-col space-y-2">
-                  <span className="grid place-items-center h-[20px] text-[15px] font-sans font-medium text-yellow-600 text-sm  w-[150px] rounded-full bg-yellow-200 text-center">
+                  <span className="grid place-items-center h-[25px] text-[15px] font-sans font-medium text-green-400 text-sm  w-[150px] rounded-full bg-lime-100 text-center">
                     Question {key + 1}
                   </span>
                   <span className="block text-[19px]  font-sans text-blue-700 tracking-tighter pl-3 border-0">
@@ -74,7 +73,7 @@ export default function MakeItFair_Main({ answerList }: any) {
                             <div className="w-[200px] h-[10px] bg-slate-200 rounded-xl ">
                               <div
                                 style={{ width: widthPercent + "%" }}
-                                className="h-[10px] shadow-none  text-center whitespace-nowrap text-white justify-center bg-blue-400  rounded-lg rounded-lg`;
+                                className="h-[10px] shadow-none  text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-green-300 to-blue-400  rounded-lg rounded-lg`;
 "
                               ></div>
                             </div>
