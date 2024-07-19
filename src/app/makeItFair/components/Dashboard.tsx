@@ -2,12 +2,13 @@ import React from "react";
 import { SlPeople } from "react-icons/sl";
 import { MdOutlineWhereToVote } from "react-icons/md";
 
-
 export default function Dashboard({ answerList }: any) {
   const countVote = answerList.length;
 
   const combined = answerList.reduce((acc: any, obj: any) => {
-    const existing = acc.find((item: any) => item.answerIP === obj.answerIP);
+    const existing = acc.find(
+      (item: any) => item.answerDateTime === obj.answerDateTime
+    );
     if (existing) {
       existing.value = [].concat(existing.value, obj.value);
     } else {
