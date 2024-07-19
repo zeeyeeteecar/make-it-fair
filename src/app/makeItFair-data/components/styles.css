@@ -1,0 +1,28 @@
+.error {
+  color: white;
+  background-color: blue;
+}
+
+.error:hover {
+  color: yellow;
+}
+
+.tooltip {
+  color: green;
+}
+
+.tooltip_item {
+  color: blueviolet;
+  display: none;
+  position: absolute;
+}
+
+.tooltip:hover {
+  color: red;
+}
+
+.tooltip:hover + .tooltip_item {
+  color: blue;
+  visibility: visible;
+  display: block;
+}

@@ -2,6 +2,7 @@ import React from "react";
 import { SlPeople } from "react-icons/sl";
 import { MdOutlineWhereToVote } from "react-icons/md";
 
+
 export default function Dashboard({ answerList }: any) {
   const countVote = answerList.length;
 
