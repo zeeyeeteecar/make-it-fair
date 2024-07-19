@@ -54,7 +54,7 @@ export default function MakeItFair_Data_Main({ answerList }: any) {
           return (
             <div
               key={key}
-              className="h-[50px] border-t flex flex-row text-slate-500 items-center"
+              className="h-[50px] border-t flex flex-row text-slate-500 items-center font-light"
             >
               <span className="w-[50px] ">{answer.ID}</span>
               <span className="w-[200px]  grid place-items-center">
