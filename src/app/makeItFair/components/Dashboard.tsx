@@ -2,23 +2,23 @@ import React from "react";
 import { SlPeople } from "react-icons/sl";
 import { MdOutlineWhereToVote } from "react-icons/md";
 
+
 export default function Dashboard({ answerList }: any) {
   const countVote = answerList.length;
 
   const combined = answerList.reduce((acc: any, obj: any) => {
-    const existing = acc.find(
-      (item: any) => item.answerDateTime === obj.answerDateTime
-    );
+    const existing = acc.find((item: any) => item.answerDateTime.toString() === obj.answerDateTime.toString());
     if (existing) {
-      existing.value = [].concat(existing.value, obj.value);
+      existing.value = [].concat(existing.value, obj.answer);
     } else {
-      acc.push({ ...obj, value: [obj.value] });
+      acc.push({ ...obj, value: [obj.answer] });
     }
     return acc;
   }, []);
 
   return (
     <div className="flex flex-row gap-6">
+      {/* {JSON.stringify(combined)} */}
       <div className="w-[250px] h-[150px]  flex flex-row justify-center items-center border-0 gap-4 bg-white rounded-2xl">
         <div className="inline-flex flex-row items-center justify-center h-16 w-16 text-purple-600 text-2xl bg-purple-100 rounded-full ">
           <SlPeople />
