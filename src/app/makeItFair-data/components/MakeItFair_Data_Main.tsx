@@ -4,7 +4,10 @@ import { pollData } from "../../lib/lib";
 
 export default function MakeItFair_Data_Main({ answerList }: any) {
   const combined = answerList.reduce((acc: any, obj: any) => {
-    const existing = acc.find((item: any) => item.answerDateTime.toString() === obj.answerDateTime.toString());
+    const existing = acc.find(
+      (item: any) =>
+        item.answerDateTime.toString() === obj.answerDateTime.toString()
+    );
     if (existing) {
       existing.value = [].concat(existing.value, obj.answer);
     } else {
@@ -13,14 +16,9 @@ export default function MakeItFair_Data_Main({ answerList }: any) {
     return acc;
   }, []);
 
-
-
   return (
     <div className="w-full h-full flex flex-col rounded-2xl p-6 bg-white">
-      <div className="text-blue-500">{JSON.stringify(combined)}</div>
-      =====
-      
-
+      {/* <div className="text-blue-500">{JSON.stringify(combined)}</div> */}
 
       <div className="w-full h-[50px]  flex flex-row items-center text-slate-400 font-semibold">
         <span className="w-[50px]">ID</span>
@@ -48,8 +46,9 @@ export default function MakeItFair_Data_Main({ answerList }: any) {
 
       {combined &&
         combined.map((answer: any, key: number) => {
-
-          const result = pollData[2].question_Answer.filter((obj:any) => obj.answerValue === answer.value[2]);
+          const result = pollData[2].question_Answer.filter(
+            (obj: any) => obj.answerValue === answer.value[2]
+          );
           const result_2 = result[0].answerTitle;
 
           return (
@@ -69,7 +68,6 @@ export default function MakeItFair_Data_Main({ answerList }: any) {
               </span>
               <span className="w-[200px] grid place-items-center">
                 {result_2}
-                
               </span>
               <span className="w-[200px] grid place-items-center">
                 {moment(answer.answerDateTime).utc(false).format("YYYY-MM-DD")}
