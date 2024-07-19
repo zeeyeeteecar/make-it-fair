@@ -34,7 +34,7 @@ export default function ProfilePage({ params }: any) {
     }
   };
   return (
-    <div className="w-screen h-screen flex flex-row bg-white border-0 border-blue-400 ">
+    <div className="w-screen h-screen border-0 border-red-400 flex flex-row bg-slate-100 p-6 space-x-5 ">
       <SideNavBar />
       <div className="w-full  grid place-items-center border-red-600 border-0 font-light ">
         <div className="w-[500px] h-[500px] flex flex-col items-center justify-center space-y-4 border-0  border-slate-500">
