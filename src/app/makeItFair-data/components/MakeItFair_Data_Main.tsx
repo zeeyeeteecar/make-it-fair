@@ -66,7 +66,7 @@ export default function MakeItFair_Data_Main({ answerList }: any) {
               <span className="w-[200px] grid place-items-center">
                 {answer.value[1].substring(10)}
               </span>
-              <span className="w-[200px] grid place-items-center">
+              <span className="w-[400px] grid place-items-center">
                 {result_2}
               </span>
               <span className="w-[200px] grid place-items-center">
