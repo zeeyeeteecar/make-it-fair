@@ -1,6 +1,7 @@
 import React from "react";
 import moment from "moment-timezone";
 import { pollData } from "../../lib/lib";
+import MakeItFair_Data_Row from "./MakeItFair_Data_Row"
 
 export default function MakeItFair_Data_Main({ answerList }: any) {
   const combined = answerList.reduce((acc: any, obj: any) => {
@@ -43,41 +44,8 @@ export default function MakeItFair_Data_Main({ answerList }: any) {
         <span className="w-[200px] grid place-items-center">Date</span>
         <span className="w-[200px] grid place-items-center">Time</span>
       </div>
-
-      {combined &&
-        combined.map((answer: any, key: number) => {
-          const result = pollData[2].question_Answer.filter(
-            (obj: any) => obj.answerValue === answer.value[2]
-          );
-          const result_2 = result[0].answerTitle;
-
-          return (
-            <div
-              key={key}
-              className="h-[50px] border-t flex flex-row text-slate-500 items-center font-light"
-            >
-              <span className="w-[50px] ">{answer.ID}</span>
-              <span className="w-[200px]  grid place-items-center">
-                {answer.answerIP}
-              </span>
-              <span className="w-[200px] grid place-items-center">
-                {answer.value[0].substring(10)}
-              </span>
-              <span className="w-[200px] grid place-items-center">
-                {answer.value[1].substring(10)}
-              </span>
-              <span className="w-[400px] grid place-items-center">
-                {result_2}
-              </span>
-              <span className="w-[200px] grid place-items-center">
-                {moment(answer.answerDateTime).utc(false).format("YYYY-MM-DD")}
-              </span>
-              <span className="w-[200px] grid place-items-center">
-                {moment(answer.answerDateTime).utc(false).format("HH:mm:ss")}
-              </span>
-            </div>
-          );
-        })}
+<MakeItFair_Data_Row combined={combined}/>
+     
     </div>
   );
 }
