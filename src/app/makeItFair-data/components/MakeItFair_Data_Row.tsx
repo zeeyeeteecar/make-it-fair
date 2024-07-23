@@ -5,25 +5,29 @@ import moment from "moment-timezone";
 import { pollData } from "../../lib/lib";
 
 export default async function MakeItFair_Data_Row({ combined }: any) {
+  const fun_ipLocation = async (answerIP: string) => {
+    return await fetch("http://ip-api.com/json/" + answerIP)
+      .then((resp) => resp.json())
+      .then((userLocationData) => {
+        console.log("userLocationData", userLocationData);
+        return userLocationData;
+      });
+  };
+
   return (
     <div>
       {combined &&
-        combined.map((answer: any, key: number) => {
+        combined.map(async (answer: any, key: number) => {
           const result = pollData[2].question_Answer.filter(
             (obj: any) => obj.answerValue === answer.value[2]
           );
+
           const result_2 = result[0].answerTitle;
 
+          //let data = await Promise(){};
 
-          let ipLocation = null;
-          const ipLocation = async () => {
-            return await fetch("http://ip-api.com/json/24.80.82.223")
-              .then((resp) => resp.json())
-              .then((userLocationData) => {
-                console.log("userLocationData", userLocationData);
-                return userLocationData;
-              });
-          };
+          const ipLocation = await fun_ipLocation(answer.answerIP);
+          console.log("ipLocation", ipLocation);
 
           return (
             <div
@@ -32,18 +36,11 @@ export default async function MakeItFair_Data_Row({ combined }: any) {
             >
               <span className="w-[50px] ">{answer.ID}</span>
               <span className="w-[200px]  grid place-items-center group ">
-                <span className="w-[150px] bg-yellow-100 grid place-items-center text-yellow-700 hover:bg-white hover:cursor-pointer hover:border-yellow-500 rounded-full">
+                <span className="w-[150px] bg-yellow-100 grid place-items-center text-yellow-700  hover:cursor-pointer hover:bg-yellow-500 hover:text-white text-sm rounded-full">
                   {" "}
                   {answer.answerIP}
                 </span>
-                <div className="opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:bg-yellow-100 absolute mt-[250px] ml-[450px] w-[300px] rounded-2xl text-gray-800 border border-gray-300  shadow-lg py-2 z-10">
-                  <p className="px-4 py-2">{ipLocation.country}</p>
-                  <p className="px-4 py-2">{ipLocation.regionName}</p>
-                  <p className="px-4 py-2">{ipLocation.city}</p>
-                  <p className="px-4 py-2">{ipLocation.zip}</p>
-                  <p className="px-4 py-2">{ipLocation.timezone}</p>
-                  <p className="px-4 py-2">{ipLocation.isp}</p>
-                </div>
+                <HoverTooltip ipLocation={ipLocation} />
               </span>
               <span className="w-[200px] grid place-items-center">
                 {answer.value[0].substring(10)}
@@ -69,6 +66,22 @@ export default async function MakeItFair_Data_Row({ combined }: any) {
             </div>
           );
         })}
+    </div>
+  );
+}
+
+function HoverTooltip({ ipLocation }: any) {
+  return (
+    <div className="opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:bg-yellow-100 absolute mt-[150px] ml-[450px] w-[300px] p-4 rounded-2xl text-gray-800 border border-gray-300  shadow-lg py-2 z-10">
+      {/* <p className="w-full border-0 block">{JSON.stringify(ipLocation)}</p> */}
+      <span className="w-full border-0 block">
+        {ipLocation.country} - {ipLocation.regionName}
+      </span>
+      <span className="w-full border-0 block">
+        {ipLocation.city} - {ipLocation.zip}
+      </span>
+      <span className="w-full border-0 block">{ipLocation.timezone}</span>
+      <span className="w-full border-0 block">{ipLocation.isp}</span>
     </div>
   );
 }
