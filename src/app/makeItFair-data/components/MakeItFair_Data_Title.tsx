@@ -13,7 +13,7 @@ export default function MakeItFair_Data_Title() {
           <p className=" grid place-items-center w-[100px] h-[25px] text-[15px] font-sans font-medium text-green-400 text-sm  rounded-full bg-lime-100 text-center hover:bg-green-700 hover:text-white hover:cursor-pointer">
             Question {key + 1}
           </p>
-          <div className="opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:bg-yellow-100 absolute mt-[200px] ml-[600px] w-[500px] bg-white text-gray-800 border border-gray-300 rounded-lg shadow-lg py-2 z-10">
+          <div className="opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:bg-yellow-100  duration-1000 absolute mt-[200px] ml-[600px] w-[500px] bg-white text-gray-800 border border-gray-300 rounded-lg shadow-lg py-2 z-10">
             <p className="px-4 py-2">{question.question_Title}</p>
 
             {question.question_Answer.map((element: any) => {
