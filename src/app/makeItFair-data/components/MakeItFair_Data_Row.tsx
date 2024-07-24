@@ -32,7 +32,7 @@ export default async function MakeItFair_Data_Row({ combined }: any) {
           return (
             <div
               key={key}
-              className="h-[50px] border-t flex flex-row text-slate-500 items-center font-light hover:bg-lime-50"
+              className="h-[50px] border-t flex flex-row text-slate-500 items-center font-light hover:bg-slate-50"
             >
               <span className="w-[50px] ">{answer.ID}</span>
               <span className="w-[200px]  grid place-items-center group ">
