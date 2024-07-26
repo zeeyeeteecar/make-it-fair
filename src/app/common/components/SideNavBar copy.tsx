@@ -21,19 +21,15 @@ export default function SideNavBar() {
                   const href = item.itemLink;
                   const isActive = pathname === href;
 
-                  // const class_Name = `${
-                  //   isActive
-                  //     ? "text-blue-500 bg-blue-100 border-red-500"
-                  //     : "text-black"
-                  // } text-sm `;
+                  const class_Name = `${
+                    isActive
+                      ? "text-blue-500 bg-blue-100 border-red-500"
+                      : "text-black"
+                  } text-sm flex flex-row items-center  h-12 hover:bg-indigo-50 hover:text-gray-800 border-r-4 border-transparent hover:border-indigo-500 duration-1000  `;
                   // text-gray-600  pr-6
 
                   return (
-                    <Link
-                      key={key}
-                      href={item.itemLink}
-                      className=" flex flex-row items-center  h-12 hover:bg-indigo-50 hover:text-gray-800 border-r-4 border-transparent hover:border-indigo-500 duration-1000 active:bg-red-400 "
-                    >
+                    <Link key={key} href={item.itemLink} className={class_Name}>
                       <span className="inline-flex justify-center items-center ml-4 ">
                         <svg
                           className="w-5 h-5"
