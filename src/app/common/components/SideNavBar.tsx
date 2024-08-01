@@ -16,7 +16,7 @@ import { useEffect } from "react";
 export default function SideNavBar() {
   return (
     <>
-      <Script
+      {/* <Script
         type="text/javascript"
         async
         src={`/static/jquery.min.js?cacheControl=${new Date().getTime()}`}
@@ -28,11 +28,11 @@ export default function SideNavBar() {
         async
         src={`/static/JS.js?cacheControl=${new Date().getTime()}`}
         strategy="beforeInteractive"
-      ></Script>
+      ></Script> */}
 
-      {/* <Helmet>
+      <Helmet>
         <script
-          src={`https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js?cacheControl=${new Date().getTime()}`}
+          src={`/static/jquery.min.js?cacheControl=${new Date().getTime()}`}
           type="text/javascript"
         />
         <script
@@ -40,7 +40,7 @@ export default function SideNavBar() {
           type="text/javascript"
           async
         />
-      </Helmet> */}
+      </Helmet>
 
       <div
         id="Main"
