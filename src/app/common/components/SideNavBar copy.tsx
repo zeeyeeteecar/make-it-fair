@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { navItems } from "../../lib/lib";
+import { navItems } from "../../lib/data";
 
 export default function SideNavBar() {
   const pathname = usePathname();
