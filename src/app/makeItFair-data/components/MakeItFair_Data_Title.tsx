@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { pollData } from "../../lib/lib";
+import { pollData } from "../../lib/data";
 
 export default function MakeItFair_Data_Title() {
   return (

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { pollData } from "../../lib/lib";
+import { pollData } from "../../lib/data";
 import Dashboard from "./Dashboard";
 import { CiFaceSmile } from "react-icons/ci";
 import { SlPeople } from "react-icons/sl";

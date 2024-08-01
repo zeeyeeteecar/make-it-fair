@@ -1,6 +1,6 @@
 import React from "react";
 import moment from "moment-timezone";
-import { pollData } from "../../lib/lib";
+import { pollData } from "../../lib/data";
 import MakeItFair_Data_Row from "./MakeItFair_Data_Row";
 import MakeItFair_Data_Title from "./MakeItFair_Data_Title";
 
@@ -19,7 +19,7 @@ export default function MakeItFair_Data_Main({ answerList }: any) {
   }, []);
 
   return (
-    <div className="w-full h-full flex flex-col rounded-2xl p-6 bg-white">
+    <div className="w-[1500px] h-full flex flex-col rounded-2xl p-6 bg-white">
       {/* <div className="text-blue-500">{JSON.stringify(combined)}</div> */}
 
       <MakeItFair_Data_Title />
