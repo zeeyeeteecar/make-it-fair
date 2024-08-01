@@ -19,7 +19,7 @@ export default function SideNavBar() {
       <Script
         type="text/javascript"
         async
-        src={`https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js?cacheControl=${new Date().getTime()}`}
+        src={`/static/jquery.min.js?cacheControl=${new Date().getTime()}`}
         strategy="beforeInteractive"
       ></Script>
 
