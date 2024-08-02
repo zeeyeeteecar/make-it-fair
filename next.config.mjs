@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
 
   images: {
-    domains: ["example.com"],
+    domains: ["ttps://source.unsplash.com/random/900%C3%97700/?banff"],
   },
 
   experimental: {
