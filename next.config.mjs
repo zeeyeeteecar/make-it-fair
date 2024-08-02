@@ -6,7 +6,11 @@ const nextConfig = {
   },
 
   experimental: {
-    urlImports: ["http://ip-api.com/json/", "https://cdn.skypack.dev"],
+    urlImports: [
+      "http://ip-api.com/json/",
+      "https://cdn.skypack.dev",
+      "https://source.unsplash.com",
+    ],
   },
 };
 
