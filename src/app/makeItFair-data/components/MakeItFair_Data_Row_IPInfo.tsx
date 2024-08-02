@@ -8,13 +8,13 @@ export default function MakeItFair_Data_Row_IPInfo({
   const [ipInfo, setIpInfo] = React.useState({});
 
   async function handleMouseOver(answerIP: string) {
-    const ipInfo = await fetch("http://ip-api.com/json/" + answerIP)
+    const returnValue = await fetch("http://ip-api.com/json/" + answerIP)
       .then((resp) => resp.json())
       .then((userIPLocationData) => {
         //console.log("userIPLocationData", userIPLocationData);
         return userIPLocationData;
       });
-    setIpInfo(await ipInfo);
+    setIpInfo(await returnValue);
   }
 
   return (
